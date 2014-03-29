@@ -1,8 +1,8 @@
 
 <?php echo $this->element('Admin/breadcrumb',
 		array('dados'=>array(
-			array('label'=>'Alunos', 'link'=> 'aqui'),
-			array('label'=>'Adicionar Aluno', 'link'=> 'aqui'),
+			array('label'=>'Eventos', 'url'=> array('action'=> 'index')),
+			array('label'=>'Editar Evento', 'url'=> array()),
 			)
 		)
 	);?>
@@ -18,11 +18,11 @@
 			);
 	?>
 	<fieldset>
-		<legend><?php echo __('Adicionar  Evento'); ?></legend>
+		<legend><?php echo __('Editar  Evento'); ?></legend>
 	<?php
 		echo $this->Form->input('id', array('empty'=> 'Selecione:','class'=> 'form-control'));
 		echo $this->Form->input('name', array('empty'=> 'Selecione:','class'=> 'form-control'));
-		echo $this->Form->input('dt_evento', array('empty'=> 'Selecione:','class'=> 'form-control'));
+		echo $this->Form->input('dt_evento', array('type'=> 'text','class'=> 'form-control', 'style'=> 'width: 160px;'));
 		echo $this->Form->input('curso_id', array('empty'=> 'Selecione:','class'=> 'form-control'));
 	?>
 	</fieldset>

@@ -13,13 +13,13 @@
 
 	<table class="table table-condensed table-bordered table-hover table-striped">
 	<tr>
-			<th><?php echo $this->Paginator->sort('id'); ?></th>
+			<th style="width: 60px;"><?php echo $this->Paginator->sort('id'); ?></th>
 			<th><?php echo $this->Paginator->sort('name'); ?></th>
 			<th class="actions text-center" style="width: 140px;"><?php echo __('Actions'); ?></th>
 	</tr>
 	<?php foreach ($cursos as $curso): ?>
 	<tr>
-		<td><?php echo h($curso['Curso']['id']); ?>&nbsp;</td>
+		<td><?php echo h(str_pad($curso['Curso']['id'], 5, 0, STR_PAD_LEFT)); ?>&nbsp;</td>
 		<td><?php echo h($curso['Curso']['name']); ?>&nbsp;</td>
 		<td class="actions text-center">
 			<?php echo $this->Html->link('<span class=\'glyphicon glyphicon-eye-open\'></span>', array('action' => 'view', $curso['Curso']['id']), array('class'=> 'btn btn-sm btn-primary', 'title'=> 'Ver', 'escape'=> false)); ?>

@@ -1,7 +1,7 @@
 <div class="livrosEmprestimos index">
 
 	<?php
-	$label = 'Adicionar LivrosEmprestimo';
+	$label = 'Adicionar Empréstimo de livro';
 	$path = array('controller'=> 'livrosEmprestimos', 'action'=> 'add');
 	$options = array('class'=> 'btn btn-success pull-right');
 	echo $this->Html->link($label, $path, $options);

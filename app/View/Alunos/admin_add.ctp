@@ -1,8 +1,8 @@
 
 <?php echo $this->element('Admin/breadcrumb',
 		array('dados'=>array(
-			array('label'=>'Alunos', 'link'=> 'aqui'),
-			array('label'=>'Adicionar Aluno', 'link'=> 'aqui'),
+			array('label'=>'Alunos', 'url'=> array('action'=> 'index')),
+			array('label'=>'Adicionar Aluno', 'url'=> array()),
 			)
 		)
 	);?>

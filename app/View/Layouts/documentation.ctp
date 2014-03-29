@@ -31,6 +31,9 @@
 		echo $this->Html->css('bootstrap.min');
 		echo $this->Html->css('Documentation/style.css');
 
+		echo $this->Html->script('Jquery/jquery-2.0.2.min');
+		echo $this->Html->script('bootstrap.min');
+
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
 		echo $this->fetch('script');
@@ -38,24 +41,22 @@
 </head>
 <body>
 
-<div class="container" style="min-height: 900px;">
-	<?php echo $this->element('Admin/navbar'); ?>
-	<br>
-	<div class="row">
-		<div class="col-lg-3">
-			<?php echo $this->element('Documentation/side_menu'); ?>
-		</div>
-		<div class="col-lg-9">
-			<?php echo $this->fetch('content'); ?>
+<div class="page-wrap">
+	<div class="container">
+		<?php echo $this->element('Admin/navbar'); ?>
+		<br>
+		<div class="row">
+			<div class="col-lg-3">
+				<?php echo $this->element('Documentation/side_menu'); ?>
+			</div>
+			<div class="col-lg-9">
+				<?php echo $this->fetch('content'); ?>
+			</div>
 		</div>
 	</div>
 </div>
 
-<div class="footer">
-	<div class="container-fluid">
-		<p>Webservice para teste do Aplicativo para TCC.</p>
-	</div>
-</div> <!-- /.footer -->
+<?php echo $this->element('footer'); ?>
 
 </body>
 </html>

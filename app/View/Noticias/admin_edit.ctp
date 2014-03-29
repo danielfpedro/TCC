@@ -1,8 +1,8 @@
 
 <?php echo $this->element('Admin/breadcrumb',
 		array('dados'=>array(
-			array('label'=>'Alunos', 'link'=> 'aqui'),
-			array('label'=>'Adicionar Aluno', 'link'=> 'aqui'),
+			array('label'=>'Notícias', 'url'=> array('action'=> 'index')),
+			array('label'=>'Editar Notícia', 'url'=> array()),
 			)
 		)
 	);?>
@@ -18,7 +18,7 @@
 			);
 	?>
 	<fieldset>
-		<legend><?php echo __('Adicionar  Noticia'); ?></legend>
+		<legend><?php echo __('Editar  Notícia'); ?></legend>
 	<?php
 		echo $this->Form->input('id', array('empty'=> 'Selecione:','class'=> 'form-control'));
 		echo $this->Form->input('texto', array('empty'=> 'Selecione:','class'=> 'form-control'));

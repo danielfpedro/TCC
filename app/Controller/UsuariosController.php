@@ -142,7 +142,7 @@ public $layout = 'admin';
 		if ($this->request->is('post')) {
 			$this->Usuario->create();
 			if ($this->Usuario->save($this->request->data)) {
-				$this->Session->setFlash(__('The usuario has been saved.'));
+				$this->Session->setFlash(__('O usuário foi salvo com sucesso.'), 'flash_info');
 				return $this->redirect(array('action' => 'index'));
 			} else {
 				$this->Session->setFlash(__('The usuario could not be saved. Please, try again.'));
@@ -165,7 +165,7 @@ public $layout = 'admin';
 		}
 		if ($this->request->is('post') || $this->request->is('put')) {
 			if ($this->Usuario->save($this->request->data)) {
-				$this->Session->setFlash(__('The usuario has been saved.'));
+				$this->Session->setFlash(__('O usuário foi salvo com sucesso.'), 'flash_info');
 				return $this->redirect(array('action' => 'index'));
 			} else {
 				$this->Session->setFlash(__('The usuario could not be saved. Please, try again.'));

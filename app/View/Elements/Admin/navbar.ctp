@@ -7,13 +7,13 @@
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
 		</button>
-		<?php echo $this->Html->link('Webservice', array('action'=> 'index'), array('class'=> 'navbar-brand')); ?>
+		<?php echo $this->Html->link('TCC', array('action'=> 'index'), array('class'=> 'navbar-brand')); ?>
 	</div>
 	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		<ul class="nav navbar-nav">
 			<li class="<?php echo ($this->params['controller'] == 'documentation') ? 'active' : ''; ?>">
 				<?php
-					echo $this->Html->link('Documentação',array('controller'=> 'documentation', 'admin'=> false));
+					echo $this->Html->link('Documentação do Webservice',array('controller'=> 'documentation', 'admin'=> false));
 				?>
 			</li>
 			<li class="<?php echo ($this->params['prefix'] == 'admin') ? 'active' : ''; ?>">

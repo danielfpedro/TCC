@@ -1,13 +1,13 @@
 <div class="usuarios index">
 
 	<?php
-	$label = 'Adicionar Usuario';
+	$label = 'Adicionar Usuário';
 	$path = array('controller'=> 'usuarios', 'action'=> 'add');
 	$options = array('class'=> 'btn btn-success pull-right');
 	echo $this->Html->link($label, $path, $options);
 ?>
 
-	<h2><?php echo __('Usuarios'); ?></h2>
+	<h2><?php echo __('Usuários'); ?></h2>
 
 	<br style="clear: both;">
 

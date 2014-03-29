@@ -138,7 +138,7 @@ public $layout = 'admin';
 		if ($this->request->is('post')) {
 			$this->Professor->create();
 			if ($this->Professor->save($this->request->data)) {
-				$this->Session->setFlash(__('The professor has been saved.'));
+				$this->Session->setFlash(__('O professor foi salvo com sucesso.'), 'flash_info');
 				return $this->redirect(array('action' => 'index'));
 			} else {
 				$this->Session->setFlash(__('The professor could not be saved. Please, try again.'));
@@ -159,7 +159,7 @@ public $layout = 'admin';
 		}
 		if ($this->request->is('post') || $this->request->is('put')) {
 			if ($this->Professor->save($this->request->data)) {
-				$this->Session->setFlash(__('The professor has been saved.'));
+				$this->Session->setFlash(__('O professor foi salvo com sucesso.'), 'flash_info');
 				return $this->redirect(array('action' => 'index'));
 			} else {
 				$this->Session->setFlash(__('The professor could not be saved. Please, try again.'));

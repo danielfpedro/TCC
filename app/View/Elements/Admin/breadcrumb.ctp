@@ -8,7 +8,7 @@
 			<li>
 				<?php
 					$label = $value['label'];
-					$url = array('controller'=> '', 'action'=> '');
+					$url = $value['url'];
 					$options = array();
 				
 					echo $this->Html->link($label, $url, $options);

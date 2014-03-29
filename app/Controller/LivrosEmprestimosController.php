@@ -142,7 +142,7 @@ public $layout = 'admin';
 		if ($this->request->is('post')) {
 			$this->LivrosEmprestimo->create();
 			if ($this->LivrosEmprestimo->save($this->request->data)) {
-				$this->Session->setFlash(__('The livros emprestimo has been saved.'));
+				$this->Session->setFlash(__('O empréstimo de livro foi salvo com sucesso.'), 'flash_info');
 				return $this->redirect(array('action' => 'index'));
 			} else {
 				$this->Session->setFlash(__('The livros emprestimo could not be saved. Please, try again.'));
@@ -165,7 +165,7 @@ public $layout = 'admin';
 		}
 		if ($this->request->is('post') || $this->request->is('put')) {
 			if ($this->LivrosEmprestimo->save($this->request->data)) {
-				$this->Session->setFlash(__('The livros emprestimo has been saved.'));
+				$this->Session->setFlash(__('O empréstimo de livro foi salvo com sucesso.'), 'flash_info');
 				return $this->redirect(array('action' => 'index'));
 			} else {
 				$this->Session->setFlash(__('The livros emprestimo could not be saved. Please, try again.'));

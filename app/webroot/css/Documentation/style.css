@@ -1,7 +1,21 @@
-.footer{
-	padding: 30px 0;
-	margin-top: 20px;
-	background-color: #EEE;
-	height: 80px;
-	width: 100%;
+html, body {
+  height: 100%;
+}
+.page-wrap {
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -80px; 
+}
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+.site-footer, .page-wrap:after {
+  /* .push must be the same height as footer */
+  height: 80px; 
+}
+.site-footer {
+	margin-top: 60px;
+	background: #EEE;
+	padding: 40px;
 }

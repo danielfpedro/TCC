@@ -29,26 +29,35 @@
 		echo $this->Html->meta('icon');
 
 		echo $this->Html->css('bootstrap.min');
+		echo $this->Html->css('Documentation/style');
+
+		echo $this->Html->script('Jquery/jquery-2.0.2.min');
+		echo $this->Html->script('bootstrap.min');
 
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
 		echo $this->fetch('script');
 	?>
 </head>
+
 <body>
 
+<div class="page-wrap">
 
-<div class="container">
-	<?php echo $this->element('Admin/navbar'); ?>
-	<div class="row">
-		<div class="col-lg-3">
-			<?php echo $this->element('Admin/side_menu'); ?>
-		</div>
-		<div class="col-lg-9">
-			<?php echo $this->fetch('content'); ?>
+	<?php echo $this->Session->flash(); ?>
+	<div class="container">
+		<?php echo $this->element('Admin/navbar'); ?>
+		<div class="row">
+			<div class="col-lg-3">
+				<?php echo $this->element('Admin/side_menu'); ?>
+			</div>
+			<div class="col-lg-9">
+				<?php echo $this->fetch('content'); ?>
+			</div>
 		</div>
 	</div>
 </div>
+<?php echo $this->element('footer'); ?>
 
 <?php //echo $this->element('sql_dump'); ?>
 

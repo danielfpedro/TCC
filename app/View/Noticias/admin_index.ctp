@@ -1,13 +1,13 @@
 <div class="noticias index">
 
 	<?php
-	$label = 'Adicionar Noticia';
+	$label = 'Adicionar Notícia';
 	$path = array('controller'=> 'noticias', 'action'=> 'add');
 	$options = array('class'=> 'btn btn-success pull-right');
 	echo $this->Html->link($label, $path, $options);
 ?>
 
-	<h2><?php echo __('Noticias'); ?></h2>
+	<h2><?php echo __('Notícias'); ?></h2>
 
 	<br style="clear: both;">
 

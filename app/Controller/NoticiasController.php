@@ -144,7 +144,7 @@ public $layout = 'admin';
 		if ($this->request->is('post')) {
 			$this->Noticia->create();
 			if ($this->Noticia->save($this->request->data)) {
-				$this->Session->setFlash(__('The noticia has been saved.'));
+				$this->Session->setFlash(__('A notícia foi salva com sucesso.'), 'flash_info');
 				return $this->redirect(array('action' => 'index'));
 			} else {
 				$this->Session->setFlash(__('The noticia could not be saved. Please, try again.'));
@@ -168,7 +168,7 @@ public $layout = 'admin';
 		}
 		if ($this->request->is('post') || $this->request->is('put')) {
 			if ($this->Noticia->save($this->request->data)) {
-				$this->Session->setFlash(__('The noticia has been saved.'));
+				$this->Session->setFlash(__('A notícia foi editada com sucesso.'), 'flash_info');
 				return $this->redirect(array('action' => 'index'));
 			} else {
 				$this->Session->setFlash(__('The noticia could not be saved. Please, try again.'));

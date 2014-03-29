@@ -142,7 +142,7 @@ public $layout = 'admin';
 		if ($this->request->is('post')) {
 			$this->Curso->create();
 			if ($this->Curso->save($this->request->data)) {
-				$this->Session->setFlash(__('The curso has been saved.'));
+				$this->Session->setFlash(__('O curso foi salvo com sucesso.'), 'flash_info');
 				return $this->redirect(array('action' => 'index'));
 			} else {
 				$this->Session->setFlash(__('The curso could not be saved. Please, try again.'));
@@ -165,7 +165,7 @@ public $layout = 'admin';
 		}
 		if ($this->request->is('post') || $this->request->is('put')) {
 			if ($this->Curso->save($this->request->data)) {
-				$this->Session->setFlash(__('The curso has been saved.'));
+				$this->Session->setFlash(__('O curso foi salvo com sucesso.'), 'flash_info');
 				return $this->redirect(array('action' => 'index'));
 			} else {
 				$this->Session->setFlash(__('The curso could not be saved. Please, try again.'));

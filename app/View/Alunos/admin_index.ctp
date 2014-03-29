@@ -13,7 +13,7 @@
 
 	<table class="table table-condensed table-bordered table-hover table-striped">
 	<tr>
-			<th><?php echo $this->Paginator->sort('id'); ?></th>
+			<th style="width: 60px;"><?php echo $this->Paginator->sort('id'); ?></th>
 			<th><?php echo $this->Paginator->sort('matricula'); ?></th>
 			<th><?php echo $this->Paginator->sort('name'); ?></th>
 			<th><?php echo $this->Paginator->sort('token_api_mobile'); ?></th>
@@ -23,7 +23,7 @@
 	</tr>
 	<?php foreach ($alunos as $aluno): ?>
 	<tr>
-		<td><?php echo h($aluno['Aluno']['id']); ?>&nbsp;</td>
+		<td><?php echo h(str_pad($aluno['Aluno']['id'], 5, 0, STR_PAD_LEFT)); ?>&nbsp;</td>
 		<td><?php echo h($aluno['Aluno']['matricula']); ?>&nbsp;</td>
 		<td><?php echo h($aluno['Aluno']['name']); ?>&nbsp;</td>
 		<td><?php echo h($aluno['Aluno']['token_api_mobile']); ?>&nbsp;</td>

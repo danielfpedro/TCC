@@ -17,7 +17,7 @@ class ApiController extends AppController {
 	 * @return void
 	 */
 	public function beforeFilter() {
-		$this->response->header('Access-Control-Allow-Origin','http://yourdomain.com');
+		$this->response->header('Access-Control-Allow-Origin','http://tcc-teste.aws.af.cm');
 		//And use the following code if you want to allow access from any host that does not belong to your rest server domain.
 		$this->response->header('Access-Control-Allow-Origin','*');
 		$this->response->header('Access-Control-Allow-Methods','GET');
@@ -55,8 +55,8 @@ class ApiController extends AppController {
 			$retorno = array('erro'=> true, 'erro_descricao'=> 'Combinação matrícula/senha inválida.');
 		}
 
-		Debugger::dump($retorno);
-		//echo json_encode($retorno);
+		//Debugger::dump($retorno);
+		echo json_encode($retorno);
 		$this->autoRender = false;	
 	}
 
@@ -85,8 +85,8 @@ class ApiController extends AppController {
 			$retorno = $this->_errorNotAllowed();
 		}
 
-		Debugger::dump($retorno);
-		//echo json_encode($retorno);
+		//Debugger::dump($retorno);
+		echo json_encode($retorno);
 		$this->autoRender = false;
 	}
 
@@ -128,8 +128,8 @@ class ApiController extends AppController {
 			$retorno = $this->_errorNotAllowed();
 		}
 
-		Debugger::dump($retorno);
-		//echo json_encode($retorno);
+		//Debugger::dump($retorno);
+		echo json_encode($retorno);
 	}
 
 	public function boletins(){
@@ -164,8 +164,9 @@ class ApiController extends AppController {
 		}else {
 			$retorno = $this->_errorNotAllowed();
 		}
-		Debugger::dump($retorno);
-		// echo json_encode($retorno);
+		
+		//Debugger::dump($retorno);
+		echo json_encode($retorno);
 	}
 
 	public function emprestimosLivros () {
@@ -192,7 +193,8 @@ class ApiController extends AppController {
 			$retorno  = $this->_errorNotAllowed();
 		}
 
-		Debugger::dump($retorno);
+		//Debugger::dump($retorno);
+		echo json_encode($retorno);
 	}
 
 	public function noticias($id = null){
@@ -243,8 +245,8 @@ class ApiController extends AppController {
 			$retorno = $this->_errorNotAllowed();
 		}
 
-		Debugger::dump($retorno);
-		// echo json_encode($retorno);
+		//Debugger::dump($retorno);
+		echo json_encode($retorno);
 	}
 
 	public function _formataArrayNoticias ($array) {
@@ -316,7 +318,8 @@ class ApiController extends AppController {
 		} else {
 			$retorno = $this->_errorNotAllowed();
 		}
-		Debugger::dump($retorno);
+		//Debugger::dump($retorno);
+		echo json_encode($retorno);
 	}
 
 	public function _errorNotAllowed() {

@@ -22,6 +22,9 @@
 <html>
 <head>
 	<?php echo $this->Html->charset(); ?>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>
 		<?php echo $title_for_layout; ?>
 	</title>
@@ -29,7 +32,7 @@
 		echo $this->Html->meta('icon');
 
 		echo $this->Html->css('bootstrap.min');
-		echo $this->Html->css('Documentation/style.css');
+		echo $this->Html->css('Documentation/style');
 
 		echo $this->Html->script('Jquery/jquery-2.0.2.min');
 		echo $this->Html->script('bootstrap.min');
